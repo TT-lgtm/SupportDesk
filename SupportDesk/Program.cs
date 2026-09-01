@@ -10,6 +10,7 @@ namespace SupportDesk
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("SupportDesk - Олег");
         }
     }
 }
