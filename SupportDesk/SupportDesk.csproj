@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SupportDesk.Logic\SupportDesk.Logic.csproj" />
+    <ProjectReference Include="..\SupportDesk.Data\SupportDesk.Data.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

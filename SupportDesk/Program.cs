@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SupportDesk.Logic;
+using SupportDesk.Data;
 
 namespace SupportDesk
 {
@@ -12,12 +13,14 @@ namespace SupportDesk
         static void Main(string[] args)
         {
             Console.WriteLine("SupportDesk - Олег");
-            var service = new TicketService();
+            ITicketRepository repository = new TicketRepository();
+            var service = new TicketService(repository);
             Console.WriteLine("Отобранные записи:");
             foreach (var item in service.GetImportant())
             {
                 Console.WriteLine($"{item.Id}: {item.Subject}");
             }
+
         }
     }
 }

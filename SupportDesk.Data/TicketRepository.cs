@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SupportDesk.Logic;
 
 namespace SupportDesk.Data
 {
-    public class TicketRepository
+    public class TicketRepository : ITicketRepository
     {
         private readonly List<Ticket> _items = new()
         {
