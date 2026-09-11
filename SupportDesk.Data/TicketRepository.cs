@@ -20,5 +20,9 @@ namespace SupportDesk.Data
         {
             return _items;
         }
+        public void Add(Ticket item)
+        {
+            _items.Add(item);
+        }
     }
 }

@@ -16,5 +16,9 @@ namespace SupportDesk.Data
                 new Ticket{ Id = 100, Subject = "Демонстрационная запись", Priority = "high"}
             };
         }
+        public void Add(Ticket item)
+        {
+            // Демонстрационное хранилище доступно только для чтения
+        }
     }
 }
