@@ -9,5 +9,6 @@ namespace SupportDesk.Logic
     public interface ITicketRepository
     {
         List<Ticket> GetAll();
+        void Add(Ticket item);
     }
 }

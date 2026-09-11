@@ -16,7 +16,21 @@ namespace SupportDesk.Logic
 
         public List<Ticket> GetImportant()
         {
-            return _repository.GetAll().Where(item => item.Priority == "high").ToList();
+            return _repository.GetAll().ToList();
+        }
+        public void AddTicket(string subject, string priority)
+        {
+            if (string.IsNullOrWhiteSpace(subject))
+            {
+                return;
+            }
+            int nextId = _repository.GetAll().Count + 1;
+            _repository.Add(new Ticket
+            {
+                Id = nextId,
+                Subject = subject,
+                Priority = priority
+            });
         }
     }
 }
